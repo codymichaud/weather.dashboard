@@ -15,3 +15,11 @@
 .findCity {
     font-size: 30px;
 }
+
+button {
+    background-color: lightcoral;
+    border: 1px solid lightcoral;
+    color: cornsilk;
+    padding: 3px 10px 3px 10px;
+    border-radius: 8px;
+}
