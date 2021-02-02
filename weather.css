@@ -1,3 +1,7 @@
+#font{
+    font-family: 'Roboto Mono', monospace;
+}
+
 .weatherTitle {
     background-color: slategray;
     color: cornsilk;
@@ -6,4 +10,8 @@
 
 .navbar{
     margin-right: 0px;
+}
+
+.findCity {
+    font-size: 30px;
 }
