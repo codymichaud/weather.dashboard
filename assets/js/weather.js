@@ -16,3 +16,11 @@ function allStorage() {
 }
 
 allStorage();
+
+//Clears local storage items and previous searches from page
+
+$(".clear").on("click", function () {
+    localStorage.clear();
+    $(".prev-city").remove();
+});
+
