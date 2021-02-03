@@ -1,0 +1,37 @@
+#font{
+    font-family: 'Roboto Mono', monospace;
+}
+
+.weatherTitle {
+    background-color: slategray;
+    color: cornsilk;
+    
+}
+
+.navbar{
+    margin-right: 0px;
+}
+
+.findCity {
+    font-size: 30px;
+}
+
+button {
+    background-color: lightcoral;
+    border: 1px solid lightcoral;
+    color: cornsilk;
+    padding: 3px 10px 3px 10px;
+    border-radius: 8px;
+}
+
+.current-box {
+    margin-right: 10px;
+}
+
+input {
+    margin-left:5px;
+}
+
+button:hover {
+    color: slategray;
+}
