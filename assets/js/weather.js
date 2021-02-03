@@ -24,3 +24,14 @@ $(".clear").on("click", function () {
     $(".prev-city").remove();
 });
 
+// Function collects info from weather APIs to display on the page
+
+$(".search").on("click", function () {
+    var subject = $(".subject").val();
+    var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + subject + "&appid=3c34658c8e0e9fdb71064b81293a3704";
+    var lat;
+    var lon;
+    if (displayForecast === true) {
+        $(".forecast-day").remove();
+        displayForecast = false;
+    }
