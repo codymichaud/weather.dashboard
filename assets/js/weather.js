@@ -51,7 +51,13 @@ $(".search").on("click", function () {
         localStorage.setItem(subject, subject);
         $(".current-box").show();
         $(">forecastBanner").show();
-        var iconCode = response.weather[i].icon;
-        var
+        var iconCode = response.weather[0].icon;
+        var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
+        $(".icon").attr("src", icon)
+        lat = response.coord.lat;
+        lon = response.coord.lon;
+        $(".currentCity").text(response.name + " " + moment().format("1"));
+        var currentTemp = response.main.temp * (9 / 5) - 459.67;
+        $(".currentTemps").text("Temperature: " + currentTemp.toFixed(1) + " °F")
     })
 })
