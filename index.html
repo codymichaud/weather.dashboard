@@ -16,41 +16,46 @@
     <div class="navbar navbar-light weatherTitle container-fluid mx-auto">
         <h1 class="offset-5" id="font">Weather Dashboard</h1>
     </div>
+    <div class="row ml-3">
 
-    <div class="col-lg-4">
-        <div class="row">
-            <h2 class="col-12 ml-5 findCity" id="font">Find your City:</h2>
-            <div class="col-12 ml-5 mb-3">
-                <input type="text" class="subject" placeholder="Enter a City" id="font"></input>
-                <button class="search" id="font">Find City</button>
-            </div>
-            <h2 class="ml-5 mt-3 col-12" id="font">Previous Searches:</h2>
-            <div class="col-12 mb-3 ml-5">
-                <div class="card" style="width: 19rem;">
-                    <ul class="list-group list-group-flush prev-list">
-                        <button class="clear mt-1" id="font">Clear Search Results</button>
-                    </ul>
+        <div class="col-lg-4">
+            <div class="row">
+                <h2 class="col-12 ml-5 findCity" id="font">Find your City:</h2>
+                <div class="col-12 ml-5 mb-3">
+                    <input type="text" class="subject" placeholder="Enter a City" id="font"></input>
+                    <button class="search" id="font">Find City</button>
                 </div>
-            </div>
-        </div>
-    </div>
-    <div class="col-lg-8">
-        <div class="row">
-            <div class="col-12 mt-3 mb-3">
-                <div class="current-box">
-                    <div class="card-body">
-                        <h2 class="currentCity card-title"></h2>
-                        <img src="" alt="Weather Icon" class="icon">
-                        <p class="card-text currentTemps"></p>
-                        <p class="card-text currentHum"></p>
-                        <p class="card-text currentWind"></p>
-                        <p class="card-text currentUv"></p>
+                <h2 class="ml-5 mt-3 col-12" id="font">Previous Searches:</h2>
+                <div class="col-12 mb-3 ml-5">
+                    <div class="card" style="width: 19rem;">
+                        <ul class="list-group list-group-flush prev-list">
+                            <button class="clear mt-1" id="font">Clear Search Results</button>
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
+        <div class="col-lg-8">
+            <div class="row">
+                <div class="col-12 mt-3 mb-3">
+                    <div class="current-box">
+                        <div class="card-body">
+                            <h2 class="currentCity card-title"></h2>
+                            <img src="" alt="Weather Icon" class="icon">
+                            <p class="card-text currentTemps"></p>
+                            <p class="card-text currentHum"></p>
+                            <p class="card-text currentWind"></p>
+                            <p class="card-text currentUv"></p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 forecastBanner">
+                    <h2 class="col-12">5 Day Forecast</h2>
+                    <div class="row ml-1 card-group forecast-list"></div>
+                </div>
+            </div>
+        </div>
     </div>
-
 
 
 
