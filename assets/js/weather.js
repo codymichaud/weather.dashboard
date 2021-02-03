@@ -40,18 +40,18 @@ $(".search").on("click", function () {
     $.ajax({
         url: apiURL,
         method: "GET",
-        statusCode: (
-            404: function() {
+        statusCode: {
+            404: function () {
                 return;
             }
-        )
-}).then(function (response) {
-    console.log(response);
-    $(">prev-list").prepend("<button class='prev-city mt-1'>" + subject + "</button>");
-    localStorage.setItem(subject, subject);
-    $(".current-box").show();
-    $(">forecastBanner").show();
-    var iconCode = response.weather[i].icon;
-    var
-})
+        }
+    }).then(function (response) {
+        console.log(response);
+        $(">prev-list").prepend("<button class='prev-city mt-1'>" + subject + "</button>");
+        localStorage.setItem(subject, subject);
+        $(".current-box").show();
+        $(">forecastBanner").show();
+        var iconCode = response.weather[i].icon;
+        var
+    })
 })
