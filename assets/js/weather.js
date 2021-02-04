@@ -86,8 +86,13 @@ $(".search").on("click", function () {
                 var forecastDateDisplay = forecastDate.charAt(5) + forecastDate.charAt(6) + "/" + forecastDate.charAt(8) + forecastDate.charAt(9) + "/" + forecastDate.charAt(0) + forecastDate.charAt(1) + forecastDate.charAt(2) + forecastDate.charAt(3);
                 var forecastIcon = forecastTimes[i].weather[0].icon;
                 var forecastIconURL = "http://openweathermap.org/img/w/" + forecastIcon + ".png";
-
+                var forecastTemp = forecastTimes[i].main.temp * (9 / 5) - 459.67;
+                var forecastHum = forecastTimes[i].main.humidity;
+                if (displayForecast === false || displayForecast === undefined) {
+                    $(".forecastList").append("<div class='my-3 pb-3 col-md-2 col-lg-2 forecast-day'>" + "<h5>" + forecastDateDisplay + "<h5>" + "<img class='ficon' src=" + forecastIconURL + " alt='Weather Icon'>" + "<div>Temp: " + forecastTemp.toFixed(1) + " °F" + "</div<div>Humidity: " + forecastHum + "%</div></div></div>");
+                }
             }
         }
+        displayForecast = true;
     })
-})
+});
