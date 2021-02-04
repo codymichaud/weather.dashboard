@@ -35,3 +35,15 @@ input {
 button:hover {
     color: slategray;
 }
+
+.forecast-day{
+    background-color: lightcoral;
+    color: cornsilk;
+    margin-left: 3px;
+    padding-top: 10px;
+}
+.list-group-item {
+    background-color: lightcoral;
+    border: none;
+    color: whitesmoke;
+}
