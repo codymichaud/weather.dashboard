@@ -61,6 +61,14 @@ $(".search").on("click", function () {
         $(".currentTemps").text("Temperature: " + currentTemp.toFixed(1) + " °F");
         $(".currentHum").text("Humidity: " + response.main.humidity + "%");
         $(".currentWind").text("Humidity" + response.wind.speed + " MPH");
+        apiURL = "http://api.openweathermap.org/data/2.5/uvi/forecast?&appid=3c34658c8e0e9fdb71064b81293a3704&lat=" + lat + "&lon=" + lon;
 
+        //This ajax request gets the UV index and uses the previous lat and lon to aqcuire this
+        $.ajax({
+            url: apiURL,
+            method: "GET",
+        }).then(function (response) {
+            $(".currentUV").text("UV Index: " + response[0].value);
+        })
     })
-})
+
