@@ -47,3 +47,8 @@ button:hover {
     border: none;
     color: whitesmoke;
 }
+
+#github {
+    width: 45px;
+    height: 45px;
+}
