@@ -72,3 +72,17 @@ $(".search").on("click", function () {
         })
     })
 
+    //This request pulls the weather data for the next 5 days
+
+    $.ajax({
+        url: apiURL2,
+        method: "GET"
+    }).then(function (response) {
+        var forecastTimes = response.list;
+        for (i = 0; i < forecastTimes.length; i++) {
+            if (forecastTimes[i].dt_text[12] === "2") {
+                var forecast
+            }
+        }
+    })
+})
