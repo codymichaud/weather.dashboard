@@ -54,7 +54,7 @@ $(".search").on("click", function () {
         $(">forecastBanner").show();
         var iconCode = response.weather[0].icon;
         var iconURL = "http://openweathermap.org/img/w/" + iconCode + ".png";
-        $(".icon").attr("src", icon)
+        $(".icon").attr("src", iconURL)
         lat = response.coord.lat;
         lon = response.coord.lon;
         $(".currentCity").text(response.name + " " + moment().format("1"));
@@ -84,6 +84,8 @@ $(".search").on("click", function () {
             if (forecastTimes[i].dt_text[12] === "2") {
                 var forecastDate = forecastTimes[i].dt_txt;
                 var forecastDateDisplay = forecastDate.charAt(5) + forecastDate.charAt(6) + "/" + forecastDate.charAt(8) + forecastDate.charAt(9) + "/" + forecastDate.charAt(0) + forecastDate.charAt(1) + forecastDate.charAt(2) + forecastDate.charAt(3);
+                var forecastIcon = forecastTimes[i].weather[0].icon;
+                var forecastIconURL = "http://openweathermap.org/img/w/" + forecastIcon + ".png";
 
             }
         }
