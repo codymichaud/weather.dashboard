@@ -29,6 +29,7 @@ $(".clear").on("click", function () {
 $(".search").on("click", function () {
     var subject = $(".subject").val();
     var apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + subject + "&appid=3c34658c8e0e9fdb71064b81293a3704";
+    var apiURL2 = "https://api.openweathermap.org/data/2.5/forecast?q=" + subject + "&appid=3c34658c8e0e9fdb71064b81293a3704";
     var lat;
     var lon;
     if (displayForecast === true) {
@@ -81,7 +82,9 @@ $(".search").on("click", function () {
         var forecastTimes = response.list;
         for (i = 0; i < forecastTimes.length; i++) {
             if (forecastTimes[i].dt_text[12] === "2") {
-                var forecast
+                var forecastDate = forecastTimes[i].dt_txt;
+                var forecastDateDisplay = forecastDate.charAt(5) + forecastDate.charAt(6) + "/" + forecastDate.charAt(8) + forecastDate.charAt(9) + "/" + forecastDate.charAt(0) + forecastDate.charAt(1) + forecastDate.charAt(2) + forecastDate.charAt(3);
+
             }
         }
     })
