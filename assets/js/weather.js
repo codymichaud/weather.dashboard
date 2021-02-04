@@ -58,6 +58,9 @@ $(".search").on("click", function () {
         lon = response.coord.lon;
         $(".currentCity").text(response.name + " " + moment().format("1"));
         var currentTemp = response.main.temp * (9 / 5) - 459.67;
-        $(".currentTemps").text("Temperature: " + currentTemp.toFixed(1) + " °F")
+        $(".currentTemps").text("Temperature: " + currentTemp.toFixed(1) + " °F");
+        $(".currentHum").text("Humidity: " + response.main.humidity + "%");
+        $(".currentWind").text("Humidity" + response.wind.speed + " MPH");
+
     })
 })
